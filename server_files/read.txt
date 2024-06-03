@@ -1,0 +1,13 @@
+//ak_svr.py
+is a socket server written in python as a test alternative where user has broken
+packages of npm 
+
+//ngrok_run
+is meant to tunnel connections to global Dns so that the 
+page can be viewed across different devices in test mode 
+or on completion
+
+//svr.js
+is the actual nodesjs server that takes the routes of the 
+pages loging user data into local mysql database which can
+later checked by business user in whatever preference

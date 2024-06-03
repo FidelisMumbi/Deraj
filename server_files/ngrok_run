@@ -1,0 +1,32 @@
+#!/bin/bash
+
+#!/bin/bash
+
+# Check if ngrok is installed
+command -v ngrok >/dev/null 2>&1 || {
+  echo "ngrok is not installed. Installing..."
+
+  # Detect the operating system
+  if [ "$(uname)" == "Darwin" ]; then
+    # Install on macOS using Homebrew
+    if ! command -v brew >/dev/null 2>&1; then
+      echo "Homebrew is not detected. Please install Homebrew for ngrok installation: https://docs.brew.sh/Installation"
+      exit 1
+    fi
+    brew install ngrok
+  else
+    # Install on Linux using curl
+    curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo gpg --dearmor -o /etc/apt/keyrings/ngrok.gpg && \
+      echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/ngrok.gpg] https://ngrok-agent.s3.amazonaws.com buster main" | \
+      sudo tee /etc/apt/sources.list.d/ngrok.list && \
+      sudo apt update && sudo apt install ngrok
+  fi
+}
+#echo "ngrok is installed!"
+
+port=$1
+
+echo  tunnelling port $port
+
+ngrok config add-authtoken 2PCOp9A46Cvi0Kts1xNGhssbDJb_25WR6WBT5qRtysseif5Ao
+ngrok http --domain=drum-clear-hawk.ngrok-free.app $port

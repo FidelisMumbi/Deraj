@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deraj/Sign_In</title>
+    <link rel="stylesheet" href="./css/sign.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+        <center><h1>Deraj_Graphics</h1></center>
+            <div class="form-toggle">
+                <button id="login-toggle" onclick="showLogin()">Login</button>
+                <button id="register-toggle" onclick="showRegister()">Register</button>
+            </div>
+            <form id="login-form" class="form" onsubmit="handleSubmit(event, 'login')">
+                <h2>Login</h2>
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <form id="register-form" class="form" onsubmit="handleSubmit(event, 'register')" style="display: none;">
+                <h2>Register</h2>
+                <input type="email" id="register-email" placeholder="Email" required>
+                <input type="password" id="register-password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="./JS/sign.js"></script>
+</body>
+</html>
+
