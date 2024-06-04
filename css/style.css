@@ -27,7 +27,8 @@ nav {
 
 .dropdown-toggle {
   position: relative;
-  left:0%;
+  top:20px;
+  left:-126%;
   border: 1.5px solid black;
   padding: 10px 15px;
   cursor: pointer;
@@ -248,7 +249,7 @@ footer{
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
     position: relative;
-    top: 8%;
+    top: -25px;
     right:0%;
 }
 
