@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background: #f0f0f0;
-    background-image: url('./res/grapho_logo.jpeg');
+    background-image: url('../res/grapho_logo.jpeg');
     background-repeat: repeat;
     display: flex;
     justify-content: center;
