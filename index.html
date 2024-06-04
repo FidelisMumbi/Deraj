@@ -120,6 +120,16 @@
     <p>By:Astronics</p>
   </footer>
   <script src="./JS/script.js"></script> 
+  <script>
+    function show_services(elementId) {
+    var element = document.getElementById(elementId);
+    if (element.style.display === 'none' || element.style.display === '') {
+        element.style.display = 'block';
+    } else {
+        element.style.display = 'none';
+    }
+    }
+  </script>
 </body>
   <style>
     footer {
