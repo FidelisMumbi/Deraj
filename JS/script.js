@@ -1,11 +1,4 @@
-function show_services(elementId) {
-    var element = document.getElementById(elementId);
-    if (element.style.display === 'none' || element.style.display === '') {
-        element.style.display = 'block';
-    } else {
-        element.style.display = 'none';
-    }
-}
+
 
 function showLogin() {
     document.getElementById('login-form').style.display = 'block';
